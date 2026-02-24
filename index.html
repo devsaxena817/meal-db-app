@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chef's Choice | Simplest Recipes</title>
+    <title>Chef's Choice | Minimalist Recipes</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -12,19 +12,24 @@
     <main class="app-container">
         <header>
             <h1>Chef's <span class="highlight">Choice</span></h1>
-            <p>Find the meal with the fewest ingredients for a quick cook.</p>
+            <p>Finding the simplest meals with the fewest ingredients.</p>
         </header>
 
         <section class="search-section">
             <div class="input-group">
-                <input type="text" id="searchInput" placeholder="Search dish (e.g., Pasta, Beef)..." autocomplete="off">
-                <button id="searchBtn">Optimize Recipe</button>
+                <input type="text" id="searchInput" placeholder="Search dish (e.g., Pasta)..." autocomplete="off">
+                <button id="searchBtn">Find Simplest</button>
+                <button id="randomBtn" class="secondary-btn">🎲 Surprise Me</button>
             </div>
         </section>
 
-        <section id="status-container"></section>
+        <div id="loader" class="loader-hidden">
+            <div class="spinner"></div>
+            <p>Scouring the kitchen...</p>
+        </div>
 
-        <section id="meal-result" class="meal-grid"></section>
+        <section id="status-container"></section>
+        <section id="meal-result"></section>
     </main>
     <script src="script.js"></script>
 </body>
