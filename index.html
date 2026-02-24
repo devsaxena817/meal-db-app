@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meal Finder - Least Ingredients</title>
+    <title>Chef's Choice | Simplest Recipes</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Meal Search</h1>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search for a meal (e.g., pizza)...">
-            <button id="searchBtn">Find Best Option</button>
-        </div>
-        <div id="result" class="meal-card">
+    <div class="overlay"></div>
+    <main class="app-container">
+        <header>
+            <h1>Chef's <span class="highlight">Choice</span></h1>
+            <p>Find the meal with the fewest ingredients for a quick cook.</p>
+        </header>
+
+        <section class="search-section">
+            <div class="input-group">
+                <input type="text" id="searchInput" placeholder="Search dish (e.g., Pasta, Beef)..." autocomplete="off">
+                <button id="searchBtn">Optimize Recipe</button>
             </div>
-    </div>
+        </section>
+
+        <section id="status-container"></section>
+
+        <section id="meal-result" class="meal-grid"></section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
